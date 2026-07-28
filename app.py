@@ -1,4 +1,4 @@
-import time
+mport time
 from pathlib import Path
 
 import numpy as np
@@ -23,10 +23,54 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    :root {
+        color-scheme: light;
+    }
+
+    html, body, [data-testid="stAppViewContainer"], .stApp {
+        background-color: #ffffff !important;
+        color: #1f2937 !important;
+    }
+
     .stApp {
         background:
             radial-gradient(circle at top right, #eef1ff 0%, transparent 35%),
             linear-gradient(180deg, #fafbff 0%, #ffffff 100%);
+    }
+
+    /* スマホのダークモードでも、白背景上の文字を濃色で固定 */
+    .stApp p,
+    .stApp li,
+    .stApp label,
+    .stApp h1,
+    .stApp h2,
+    .stApp h3,
+    .stApp h4,
+    .stApp h5,
+    .stApp h6,
+    .stApp [data-testid="stMarkdownContainer"],
+    .stApp [data-testid="stWidgetLabel"],
+    .stApp [data-testid="stMetricLabel"],
+    .stApp [data-testid="stMetricValue"] {
+        color: #1f2937 !important;
+    }
+
+    .description-card,
+    .advice-card,
+    .insight-card {
+        color: #1f2937 !important;
+    }
+
+    /* 濃い背景上は白文字を維持 */
+    .hero-card,
+    .hero-card *,
+    .result-card,
+    .result-card *,
+    .stButton > button,
+    .stButton > button *,
+    .stFormSubmitButton > button,
+    .stFormSubmitButton > button * {
+        color: #ffffff !important;
     }
 
     .main .block-container {
@@ -1368,3 +1412,4 @@ elif page == "detail_result":
     show_detail_result()
 elif page == "about":
     show_about()
+   
