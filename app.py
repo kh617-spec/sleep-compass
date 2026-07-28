@@ -73,6 +73,24 @@ st.markdown(
         color: #ffffff !important;
     }
 
+    /* 上の一般文字色指定より優先し、濃いカード内は確実に白文字にする */
+    .stApp .hero-card,
+    .stApp .hero-card p,
+    .stApp .hero-card span,
+    .stApp .hero-card strong,
+    .stApp .hero-card div,
+    .stApp .hero-card [data-testid="stMarkdownContainer"],
+    .stApp .hero-card [data-testid="stMarkdownContainer"] *,
+    .stApp .result-card,
+    .stApp .result-card p,
+    .stApp .result-card span,
+    .stApp .result-card strong,
+    .stApp .result-card div,
+    .stApp .result-card [data-testid="stMarkdownContainer"],
+    .stApp .result-card [data-testid="stMarkdownContainer"] * {
+        color: #ffffff !important;
+    }
+
     .main .block-container {
         max-width: 900px;
         padding-top: 2rem;
@@ -1412,4 +1430,3 @@ elif page == "detail_result":
     show_detail_result()
 elif page == "about":
     show_about()
-   
